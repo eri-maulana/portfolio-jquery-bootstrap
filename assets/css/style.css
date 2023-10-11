@@ -7,6 +7,33 @@ body{
    margin-top: 25px;
 }
 
+.jumbotron {
+   height: 400px;
+   background-image: url("https://source.unsplash.com/1200x800?programming");
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: 0 -100px;
+   overflow: hidden;
+}
+
+.profile{
+   padding-top:20px;
+}
+
+.pKiri, .pKanan{
+   opacity: 0;
+   transform: translate(-50px, 0) rotate(15deg);
+   transition:1s;
+}
+
+.pKanan{
+   transform: translate(50px, 0) rotate(-15deg);
+}
+
+.pKiri.pMuncul,.pKanan.pMuncul{
+   opacity:1;
+   transform: translate(0, 0);
+}
 
 .hr {
    width: 250px;
@@ -23,6 +50,17 @@ section {
 
 .portfolio{
    background-color: #eee;
+}
+
+.portfolio .img-thumbnail{
+   opacity: 0;
+   transform: translate(0, -40px);
+   transition: .5s;
+}
+
+.portfolio .img-thumbnail.muncul{
+   opacity: 1;
+   transform: translate(0, 0);
 }
 
 .kontak {
